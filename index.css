@@ -47,6 +47,22 @@ header{
 .menu-open{
     transform:translateX(0)
 }
+.contact{
+    display:flex;
+    margin: 10px auto;
+    align-items: center;
+}
+.contact-icon-con{
+    background-color:rgb(35, 94, 221);
+    font-weight:800;
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-right:5px;
+    border-radius:7px;
+}
 .menu-item{
     font-size:18px;
     text-decoration: none;
@@ -74,17 +90,22 @@ footer{
     clip-path: polygon(0 1%, 95% 0, 100% 100%, 10% 100%);    
 }
 .contacts{
-    margin-right:30px;
+    position:relative;
+    right:100px;
 }
 .links>a{
     display:block;
     color:white;
     text-decoration:none;
+    margin:10px auto
 
 }
 footer>img{
     z-index:1;
     opacity:0.7;
+    width:200px;
+    position:relative;
+    left:200px;
 
 }
 .con{
@@ -668,6 +689,17 @@ margin-bottom:20px;
         flex-direction: column ;
         gap:20px;
         padding:0 ;
+    }
+    footer{
+        height:auto;
+        flex-direction: column;
+        gap:30px
+    }
+    .contacts{
+        left:0;
+    }
+    footer>img{
+        left:0;
     }
     .service:nth-of-type(even)>.service-group{
         flex-direction:column;
