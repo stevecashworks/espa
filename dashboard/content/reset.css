@@ -1,0 +1,25 @@
+.inps{
+    display:flex;
+    gap:50px;
+    justify-content:space-around;
+    margin:70px auto;
+
+
+}
+.inp{
+    width:300px !important;
+}
+.error{
+    display:none;
+    font-size:18px !important;
+    text-align:center;
+}
+.error.visible{
+    display:block;
+}
+@media (max-width:720px){
+    .inps{
+        flex-direction:column
+    }
+
+}

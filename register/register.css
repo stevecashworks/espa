@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+--red:rgb(155, 19, 245);
+--blue:rgb(78, 243, 216);
+--teal:rgb(5, 117, 192);
+}
+body{
+    display:grid;
+    width:100vw;
+    place-items:center;
+    background-color: rgb(22, 18, 18);
+    color:white;
+    font-family: poppins, sans-serif;
+    overflow-x: hidden;
+}
+.form-con{
+ width:550px;
+ border-radius: 20px;
+ background-color: rgb(32, 32, 32);
+ display:flex;
+ padding:20px;
+ flex-direction: column;
+ gap:20px;
+ padding: 15px 15px;
+ /* overflow-x: hidden; */
+}
+.flex-g{
+    display: flex;
+    margin:20px auto;
+    gap:20px;
+}
+form{
+    width:100%;
+}
+.intro{
+    font-weight:700;
+    font-size:24px;
+    animation: moveLeft 1s ease 0.8s ;
+}
+.form-con>p{
+    width:350px;
+    margin:10px 20px;
+    
+}
+.exp{
+    opacity:0.5;
+    animation: moveRight 1s ease  ;
+    
+}
+label{
+    display:block;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.flex-group{
+    display:flex;
+    width:100%;
+    gap:20px;
+    justify-content: center;
+}
+
+input,select{
+    border:1px solid white;
+    background-color: transparent;
+    color: white;
+    margin: 10px auto;
+    height:30px;
+    width:80%;
+
+}
+.form-group{
+    margin:10px
+}
+.flex-group>.form-group>input:not([type=radio]){
+    width:250px;
+}
+label::after{
+ content: " :";
+}
+input:required{
+ border: 1px solid var(--blue);
+ outline: 1px solid var(--blue);
+}
+
+.form-group>p{
+    color:var(--blue);
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 600;
+}
+a{
+    color:var(--blue);
+    text-decoration:none;
+}
+form:nth-last-child(){
+    display: inline-block;
+}
+.agree{
+    margin:10px auto;
+}
+button{
+    width:150px;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    height:35px;
+    border-radius:10px;
+    background-color:var(--blue);
+    color:rgb(32, 32, 32);
+    text-transform:capitalize;
+    border: none;
+    cursor: pointer;
+}
+
+.options{
+    background-color:rgb(255, 255, 255);
+    color: #333;
+    width:250px;
+    padding:20px;
+    margin:20px auto;
+    border-radius:15px;
+    font-size:13px;
+    font-weight: 700;
+    }
+    .option-unit{
+        display: flex;
+        align-items: center;
+        gap:30px;
+        justify-content: flex-start;
+        position: relative;
+        margin:10px;
+        height:50px
+    }
+    .option-unit>*{
+     display:inline;
+    }
+    .radio-label::after{
+        display:none
+    }
+    .radio-label{
+    position:absolute;
+    left:50px;
+    }
+    .radio-btn{
+        width:20px;
+        position:absolute;
+        left:10px;
+    }
+    textarea{
+        margin:0 auto;
+        width:90%;
+        padding-left:5px;
+        height:30px;
+
+    }
+@keyframes moveLeft {
+    from{
+        
+        transform:translateX(200px)
+
+    }
+    to{
+        
+        
+        transform: translateX(0);
+
+    }
+}
+@keyframes moveRight {
+    from{
+        transform:translateX(-200px)
+
+    }
+    to{
+        transform: translateX(0);
+
+    }
+}
+
+@media (max-width:480px){
+    .form-con{
+        width:100%;
+        height:auto;
+    }
+    form{
+        height:auto;
+        width: 100%;
+    }
+    .flex-g{
+        flex-direction:column;
+    }
+    .flex-group{
+        flex-direction: column;
+    }
+    .agree{
+        width:300px;
+        margin:30px  5px;
+    }
+    button{
+        margin:30px 0;
+        width:80%;
+        height:40px
+    }
+    input,select{
+        height:40px;
+        margin:30px auto;
+        width:90%;
+    }
+    .form-con>p{
+        width:90%;
+    }
+    .flex-group>.form-group>input:not([type=radio]){
+        width:90%
+    }
+}

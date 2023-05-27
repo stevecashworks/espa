@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./register.css"/>
+    <title>Register</title>
+</head>
+<body >
+    <div class="form-con">
+        <img src="../assets/logo/ESPA2.png" width=150/>
+        <p class="intro">Now let's create an account</p>
+        <p class="exp">Koin offers a an amazing experience for those who want to invest in cryptocurrencies</p>
+    <form >
+
+        <div class="flex-group">
+
+            <div class="form-group">
+                <label  for="firstName">First name</label>
+                <input  name="firstName"type="text" required id="first-name"/>
+                <p> first name is required</p>
+            </div>
+            <div class="form-group">
+                <label for="last-name"> Last name</label>
+                <input type="text" name="lastName" required id="last-name"/>
+                <p> last name is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="countries">Where do you live</label>
+            <select name="country" id="countries" value="united states of america">
+            <!-- <option>United states of America</option>     -->
+            </select>
+            
+            
+        </div>
+        <div class="form-group">
+            <label for="countries">How did you find us?</label>
+            <div class="options">
+                
+                <div class="option-unit" >
+
+                    <input type="radio" class="radio-btn" id="ads" value="ads"   name="sources">
+                    <label for='ads' value="ads" class="radio-label">Online-ads</label>
+                    
+                </div>
+                <div class="option-unit" >
+
+                    <input type="radio" class="radio-btn" id="print" value="media"   name="sources">
+                    <label for='print'value="print"class="radio-label">NewsPapers/magazines</label>
+                    
+                </div>
+                <div class="option-unit" >
+
+                    <input type="radio" class="radio-btn" id="ref" value="referral"   name="sources">
+                    <label for="ref" class="radio-label">Referral</label>
+
+                    
+                </div>
+                <div class="option-unit" >
+
+                    <input type="radio" class="radio-btn" value="others" id="others"  name="sources">
+                    <label for='others' class="radio-label">Others(please speicfy)</label>
+
+                    
+                </div>
+                <textarea style="display:none;" ></textarea>
+
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" name="email" required id="email"/>
+            <p> email is required</p>
+        </div>
+        <div class="form-group">
+            <label for="password"> password</label>
+            <input required name="password" type="password" id="password"/>
+            <p>password is required</p>
+        </div>
+        <div class="form-group">
+            <label for="repeatPassword">repeat password</label>
+            <input required  name="repeatPassword" type="password" id="repeatPassword"/>
+            <p>password is required</p>
+        </div>
+        <p class="agree">By continuing you agree with the <a href="#">terms of service</a> and <a href="#">privacy policy</a>.</p>
+   <div class="flex-g">
+
+       <p>Already registered? <a href="../dashboard/content/login.html">sign in</a> </p>    
+    </div>
+    <button >continue</button>
+</form>
+    </div>
+
+ <script type="module"  src="./register.js"></script>    
+</body>
+</html>
