@@ -697,7 +697,8 @@ margin-bottom:20px;
     footer{
         height:auto;
         flex-direction: column;
-        gap:30px
+        gap:30px;
+        clip-path:none;
     }
     .contacts{
         left:0;
