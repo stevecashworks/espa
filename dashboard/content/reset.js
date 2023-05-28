@@ -16,7 +16,7 @@ const reset=async()=>{
         } else{
             const newPass=pass1
             console.log(id)
-            const resp= await fetch(`http://localhost:5000/api/v3/users/reset/${id}`,{
+            const resp= await fetch(`https://espa-back.onrender.com/api/v3/users/reset/${id}`,{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({newPass})

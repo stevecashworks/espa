@@ -140,7 +140,7 @@ const setProof=(e)=>{
     errors=checkErrors()
     creatErrorUi()
 }
-const url= 'http://localhost:5000/api/v3/investments/add/'+localStorage.getItem('kointk')
+const url= 'https://espa-back.onrender.com/api/v3/investments/add/'+localStorage.getItem('kointk')
 // console.log(url)
 const submitProof=async()=>{
     const details={img,choice,amount,requestType:"investment"};

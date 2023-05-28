@@ -14,7 +14,7 @@ const menu= document.querySelector('.menu-div')
  }
  
  const getStats=async()=>{
-    const resp= await fetch('http://localhost:5000/api/v3/stats');
+    const resp= await fetch('https://espa-back.onrender.com/api/v3/stats');
     const jsonData= await resp.json();
     console.log(jsonData)
     const {result}=jsonData
@@ -23,8 +23,8 @@ const menu= document.querySelector('.menu-div')
     const accounts= document.getElementById("accounts")
     const withdrawals= document.getElementById("withdrawals");
     runningDays.innerHTML= result.runningDays
-    investments.innerHTML="$"+result.totalInvestments
-    withdrawals.innerHTML="$"+result.totalWithdrawals
+    investments.innerHTML="$"+result.totalInvestments.toFixed(2)
+    withdrawals.innerHTML="$"+result.totalWithdrawals.toFixed(2)
     accounts.innerHTML=result.totalAccounts
  }
  const accordionHeaders=document.querySelectorAll('.accordion-header')

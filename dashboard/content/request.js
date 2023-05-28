@@ -9,7 +9,7 @@ console.log(id)
 const func=async()=>{
 
     const getDetails=async()=>{
-    const res= await fetch(`http://localhost:5000/api/v3/investments/request/${id}`)
+    const res= await fetch(`https://espa-back.onrender.com/api/v3/investments/request/${id}`)
     const jsonRes= await res.json()
 
     if(jsonRes.success){

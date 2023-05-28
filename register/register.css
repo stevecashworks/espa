@@ -16,6 +16,11 @@ body{
     font-family: poppins, sans-serif;
     overflow-x: hidden;
 }
+.error{
+    margin:20px auto;
+    color:crimson;
+    display :none;
+}
 .form-con{
  width:550px;
  border-radius: 20px;

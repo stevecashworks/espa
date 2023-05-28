@@ -8,7 +8,7 @@ console.log(tk);
 const fileUserDetails=async()=>{
     
     const fetchUserData=async()=>{
-        const response=await fetch(`http://localhost:5000/api/v3/users/token/${tk}`,{
+        const response=await fetch(`https://espa-back.onrender.com/api/v3/users/token/${tk}`,{
             method:"post",
             headers:{'Content-Type':'application/json'}
         })
@@ -25,7 +25,7 @@ const fileUserDetails=async()=>{
     const userData= await fetchUserData();
     $('#referal').html(userData.referalls.length)
     $("#total-earnings").html("$"+userData.earnings)
-    fetch(`http://localhost:5000/api/v3/investments/latest/${userData._id}`).then(res=>res.json()).then(data=>{
+    fetch(`https://espa-back.onrender.com/api/v3/investments/latest/${userData._id}`).then(res=>res.json()).then(data=>{
         if(data.success){
             console.log(data)
             $("#last-investment").html(`$${data.result.investment.amount}`)
@@ -35,7 +35,7 @@ const fileUserDetails=async()=>{
         nameElem.textContent=userData.firstName + " " + userData.lastName
         account.textContent=userData.firstName + " " + userData.lastName
         $('#balance').html("$"+userData.balance)
-        const link=`http://localhost:5500/register/register.html?ref=${userData._id}`
+        const link=`https://espa-back.onrender.com/register/register.html?ref=${userData._id}`
         document.getElementById('link').addEventListener('click',()=>{
             navigator.clipboard.writeText(link).then(()=>{
                 console.log('copied');
@@ -144,7 +144,7 @@ const fileUserDetails=async()=>{
         }
     }
     const getPendingRequests=async()=>{
-       const pending= await fetch(`http://localhost:5000/api/v3/investments/${localStorage.getItem('kointk')}/pending`)
+       const pending= await fetch(`https://espa-back.onrender.com/api/v3/investments/${localStorage.getItem('kointk')}/pending`)
         .then(res=>res.json())
         .then(data=>data)
         if(pending.success){

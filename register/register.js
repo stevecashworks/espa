@@ -2,7 +2,7 @@
 const form=document.querySelector('form')
 const allSourceInputs=document.querySelectorAll('.option-unit>input');
 const textArea=document.querySelector('textarea')
-const apiEntry='http://localhost:5000/api/v3';
+const apiEntry='https://espa-back.onrender.com/api/v3';
 
 const lb=document.getElementById('others-btn')
 const watchList=[document.getElementById('ref'),document.getElementById('others')]
@@ -23,7 +23,7 @@ allSourceInputs.forEach(x=>{x.addEventListener('change',()=>{
 const reffererId=new URLSearchParams(window.location.search).get("ref")
 if(reffererId){
     document.getElementById('ref').checked=true
-    fetch('http://localhost:5000/api/v3/users/ref/'+reffererId).then(res=>res.json()).then(data=>console.log(data.result))
+    fetch('https://espa-back.onrender.com/api/v3/users/ref/'+reffererId).then(res=>res.json()).then(data=>console.log(data.result))
 }
  const SubmitItem=async(e)=>{
     e.preventDefault();
@@ -54,6 +54,8 @@ if(reffererId){
      
  
  }
+ document.querySelector(".error").style.display='none'
+
  if(keyVals.password===keyVals.repeatPassword){
 
      console.log(keyVals)
@@ -62,7 +64,7 @@ if(reffererId){
      
     }
     else{
-        console.log('passwords don\'t match')
+        document.querySelector(".error").style.display='block'
     }
     }
     form.addEventListener("submit",(e)=>{
