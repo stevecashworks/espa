@@ -1,4 +1,4 @@
-const entry="http://localhost:5000/api/v3/investments"
+const entry="https://espa-back.onrender.com/api/v3/investments"
 export const approve=async(id, requestType)=>{
     const res= await fetch(`${entry}/approve/${id}/${requestType}`)
     const data= await res.json()
@@ -29,7 +29,7 @@ export const deleteRequest=async(id)=>{
 }
 export const sendMessage=async(id)=>{
     const message=document.getElementById('message').value
-    const resp=await fetch(`http://localhost:5000/api/v3/investments/message/${id}`,{
+    const resp=await fetch(`https://espa-back.onrender.com/api/v3/investments/message/${id}`,{
         method:"post",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({message})
