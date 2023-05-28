@@ -34,7 +34,6 @@ const start=async()=>{
         console.log(process.env.mongo_uri)
         await connectDb(process.env.mongo_uri)
         app.listen(port,()=>{console.log(`${new Date(Date.now())}: database connected,server is listening on port: ${port} `)})
-        
         // resets the databases/collections
 
         // await request.deleteMany()
