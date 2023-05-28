@@ -653,6 +653,10 @@ margin-bottom:20px;
     justify-content:space-around;
 
 }
+.desktop>a{
+    color:inherit;
+    text-decoration: none;
+}
 .wa-link{
     text-decoration:none;
     color:teal;
