@@ -116,7 +116,7 @@ export const resetPassword=async(req,res,next)=>{
         <body>
         <h2>Password reset</h2>
         <p>Hi, ${thisUser.firstName} please click the button below to continue</p>
-        <a href=${`http://localhost:5500/dashboard/content/reset.html?rq=${thisUser._id}${randomChar()}`} style="display:block; border-radius:8px;text-decoration: none;padding: 10px 20px; background-color: teal; color: white; margin:20px auto; font-weight:bold; text-align:center;">Reset password</a>
+        <a href=${`https://espainvestment.onrender.com/dashboard/content/reset.html?rq=${thisUser._id}${randomChar()}`} style="display:block; border-radius:8px;text-decoration: none;padding: 10px 20px; background-color: teal; color: white; margin:20px auto; font-weight:bold; text-align:center;">Reset password</a>
 
         reset password
          
