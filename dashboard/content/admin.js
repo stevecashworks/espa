@@ -3,7 +3,7 @@ const tBody= document.querySelector(".user-body")
 const ex=["_id","__v", "password","notifications","proof","createdAt","updatedAt"]
 const elem= (el)=>document.createElement(el)
 const getAllUsers=async()=>{
-const  usersRes= await fetch('http://espa-back.onrender.com/api/v3/users/all')
+const  usersRes= await fetch('https://espa-back.onrender.com/api/v3/users/all')
 const data= await usersRes.json()
 if(data.success){
      const users=data.result
