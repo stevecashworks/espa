@@ -674,6 +674,11 @@ margin-bottom:20px;
 .wa-link:hover{
     opacity:0.4;
 }
+.ESPA{
+    position: relative;
+    width:150px;
+    top:10px;
+}
 @keyframes marqee{
     0%{
         transform: translateX(100%);
@@ -784,7 +789,8 @@ margin-bottom:20px;
     }
 .ESPA{
         position: relative;
-        height:50px;
+        width:130px;
+        top:10px;
     }
 
 }
