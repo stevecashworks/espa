@@ -97,10 +97,10 @@ const amountInput=document.getElementById('amountInp');
 const returnOut= document.getElementById('return')
 
 const choices={
-    dodge:{name:"dodge-coin",id:"245738798291hkhbc",image:"../../assets/coins/dodge.jpg"},
-    bitcoin:{name:"bitcoin",id:"245738798291hkhbci46",image:"../../assets/coins/bitcoin.png"},
-    eth:{name:"ethereum",id:"245738798291hkhhjdshbcaa",image:"../../assets/coins/eth.svg"},
-    litecoin:{name:"litecoin",id:"245738798291hkhhjdshbcaax123",image:"../../assets/coins/lite.png"}
+    dodge:{name:"dodge-coin",id:"DQvGoNaggViA5PH4SyLDsnTgGXdMczPEhB",image:"../../assets/coins/dodge.jpg"},
+    bitcoin:{name:"bitcoin",id:"bc1qwf4w8fynm03tknrcmcya69uzcuwhfgsn7jjt6d",image:"../../assets/coins/bitcoin.png"},
+    eth:{name:"ethereum",id:"0xEaD76b8cdF64d4B969F5e3664A0bb8ec65F47313",image:"../../assets/coins/eth.svg"},
+    litecoin:{name:"litecoin",id:"ltc1qwhseals63q7mksxrahcfuxkegexqqeg6gwq33c",image:"../../assets/coins/lite.png"}
 }
 const coinImages=document.querySelectorAll('.coin')
 coinImages.forEach(item=>{
