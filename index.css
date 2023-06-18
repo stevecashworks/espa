@@ -650,7 +650,7 @@ margin-bottom:20px;
 }
 .trans{
     display:flex;
-    justify-content:space-around;
+    justify-content:flex-start;
 
 }
 .desktop>a{
